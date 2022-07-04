@@ -1,0 +1,288 @@
+.order-form{
+  flex: 1;
+}
+.checkout{
+  position: relative;
+
+  &-page{
+    .header__shape{
+      opacity: 0;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      background: url("../img/checkout-bg.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      top:0;
+      z-index: -1;
+    }
+  }
+
+  &-titles{
+    padding: toRem(56) toRem(48) 0;
+    @include xxl(){
+      padding: toRem(120) toRem(112) 0;
+    }
+    h1{
+      @include font(32,48);
+      text-align: center;
+      @include xxl(){
+        text-align: left;
+        @include font(64,80);
+      }
+      margin: 0;
+      font-weight: 600;
+      color: $dark;
+    }
+    h2{
+      @include font(20,30);
+      text-align: center;
+      @include xxl(){
+        text-align: left;
+        @include font(44,56);
+      }
+      margin: 0;
+      font-weight: 600;
+      color: $dark;
+    }
+  }
+
+  &-card{
+    background-color: $white;
+    z-index: 10;
+    border-radius: toRem(20);
+    padding: toRem(40) toRem(48);
+    @include xxl(){
+      padding: toRem(72) toRem(112);
+    }
+    box-shadow: 8px 12px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  &-form-section{
+    margin-top: toRem(72);
+    @include xxl(){
+      margin-top: toRem(88);
+    }
+    display: flex;
+    flex-direction: column-reverse;
+    gap: toRem(32);
+
+    @include xxl(){
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+  }
+
+  &-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(8);
+    &__card{
+      width: 100%;
+
+    }
+    &__exp{
+      flex: 2;
+
+    }
+    &__cvc{
+      flex: 1;
+    }
+    &__card,&__cvc{
+      position: relative;
+      img{
+        position: absolute;
+        right: toRem(12);
+        top: 50%;
+      }
+    }
+  }
+
+  &-form{
+    display: flex;
+    flex-direction: column;
+    gap: toRem(32);
+    @include xxl(){
+      gap: toRem(48)
+    }
+
+    &__titles{
+      h3{
+        @include font(24,36);
+        @include xxl(){
+          text-align: left;
+          @include font(32,48);
+        }
+        text-align: center;
+        font-weight: 600;
+        margin: 0;
+      }
+      h4{
+        @include font(14,20);
+        @include xxl(){
+          text-align: left;
+          @include font(16,24);
+        }
+        text-align: center;
+
+        font-weight: 400;
+        margin-top: toRem(16);
+      }
+    }
+    &__fields{
+      display: flex;
+      flex-direction: column;
+      gap: toRem(20);
+      @include xxl(){
+        gap: toRem(24);
+      }
+    }
+
+    &__separator{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: toRem(24);
+      div{
+        border-top: 1px solid #8792A2;
+        flex: 1;
+      }
+      p{
+        text-align: center;
+        color: #8792A2;
+
+      }
+    }
+
+    &__buttons{
+      display: flex;
+      flex-direction: column;
+      gap: toRem(24);
+      button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: toRem(48);
+        border: none;
+        box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .button-apple{
+        background-color: $black;
+        img{
+          height: 24px;
+        }
+      }
+      .button-paypal{
+        background-color: $white;
+      }
+    }
+
+    &__submit{
+      background: $primary;
+      border-radius: 50px;
+      border: none;
+      align-self: center;
+      padding: toRem(10) toRem(40);
+      color: $white;
+      @include font(14,20);
+      @include xxl(){
+        @include font(16,24);
+        padding: toRem(16) toRem(88);
+      }
+      text-transform: uppercase;
+      font-weight: bold;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.order-details{
+  display: flex;
+  flex-direction: column;
+  gap: toRem(24);
+  @include xxl(){
+    position: sticky;
+    top: 0;
+    gap: toRem(48);
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: toRem(24);
+
+    .product-detail{
+      display: flex;
+      justify-content: space-between;
+      gap: toRem(36);
+      &__img {
+        img.filter{
+          filter: invert(1);
+        }
+      }
+      &__info{
+        display: flex;
+        flex-direction: column;
+        gap: toRem(16);
+        h4,h5{
+          margin: 0;
+        }
+        h4{
+          @include font(12,18);
+          text-transform: uppercase;
+          font-weight: 600;
+          color: $dark;
+        }
+        h5{
+          @include font(10,18);
+          font-weight: 600;
+          color:  #848DA3;
+        }
+      }
+    }
+
+  }
+  &__sep{
+    width: 100%;
+    color: #2A2D34;
+    opacity: 0.08;
+  }
+
+  &__totals{
+    display: flex;
+    flex-direction: column;
+    gap: toRem(8);
+    @include xxl(){
+      gap: toRem(24);
+    }
+    &-line{
+      display: flex;
+      justify-content: space-between;
+      h3,h4{
+        margin: 0;
+      }
+      h3{
+        @include font(20,30);
+        @include xxl(){
+          @include font(24,32);
+        }
+      }
+      h4{
+        @include font(14,20);
+        @include xxl(){
+          @include font(16,24);
+        }
+      }
+    }
+  }
+}

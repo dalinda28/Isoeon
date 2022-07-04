@@ -1,0 +1,25 @@
+
+header{
+  display: flex;
+  justify-content: center;
+  .header__logo{
+    margin: 1rem 5rem;
+    z-index: 99999;
+  }
+  .header__shape{
+    display: none;
+  }
+  @include xxl {
+    height: toRem(150);
+    display: block;
+    .header__logo{
+      position: absolute;
+      display: block;
+    }
+    .header__shape{
+      display: unset;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

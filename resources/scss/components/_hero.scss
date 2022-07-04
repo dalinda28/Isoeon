@@ -1,0 +1,58 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__title{
+        @include font(32,48);
+        @include xxl(){
+            @include font(64,80);
+        }
+        font-weight: 600;
+        color: $dark;
+        margin: 2rem;
+    }
+
+    &__subtitle{
+        @include font(20,30);
+        @include xxl(){
+            @include font(44,56);
+        }
+        font-weight: 500;
+        color: $dark;
+        letter-spacing: 1px;
+    }
+
+    &__image {
+        position: sticky;
+        width: 500px;
+    }
+    
+    @include xxl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &__title{
+            font-size: 4rem;
+            font-weight: 600;
+            color: $dark;
+            margin: 2rem;
+        }
+
+        &__subtitle{
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+            color: $dark;
+            letter-spacing: 1px;
+        }
+
+        &__image {
+            position: sticky;
+            width: 800px;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+.opinions {
+    height: 36rem;
+    background-color: $shadow;
+    color: $white;
+    padding: 1rem 4rem;
+
+    &__title {
+        font-style: italic;
+        font-weight: 300;
+        font-size: 31px;
+        color: $white;
+    }
+
+    &__eclipse{
+        position: absolute;
+        transform: translateX(-65px);
+    }
+}
+
+    @include xxl {
+        .opinions {
+            height: 26rem;
+            background-color: $shadow;
+            color: $white;
+            padding: 4rem;
+            
+            &__title {
+                font-style: italic;
+                font-weight: 300;
+                font-size: 33px;
+                color: $white;
+            }
+        }
+       
+    }
+
+    .opinion {
+        flex-direction: column;
+        display: grid;
+        grid-gap: 2rem;
+        color: #333136;
+        grid-template-columns: 1fr;
+
+        &__text {
+            font-style: italic;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        &__item { 
+            position: relative;
+            background-color: $white;
+            color: $dark;
+            padding: 0 2rem;
+            border-radius: 5%;
+        }
+    }
+    .other {
+        visibility: hidden;
+    }
+    
+@include xxl {
+    .opinion {
+        flex-direction: column;
+        display: grid;
+        grid-gap: 2rem;
+        color: #333136;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr;
+        padding-top: 2rem;
+
+        &__text {
+            font-style: italic;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 35px;
+        }
+        
+        &__item {
+            position: relative;
+            background-color: $white;
+            color: $dark;
+            padding: 0 2rem;
+            border-radius: 5%;
+        }
+
+    }
+    .other {
+        visibility:initial;
+    }
+}

@@ -1,0 +1,187 @@
+body.custom-page {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .custom {
+            display: flex;
+            flex-direction: column;
+            @include xxl() {
+                flex-direction: row;
+            }
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                @include xxl() {
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                justify-content: center;
+                align-items: center;
+                fieldset {
+                    border-radius: toRem(20);
+                    border: none;
+                    background: $white;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+                    margin: 25px 0px;
+                    padding: 15px;
+                }
+                .colorpicker_field {
+                    border: none;
+                    input{
+                        margin: 0px 15px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+                .print_field {
+                    display: flex;
+                    flex-direction: column;
+
+                    .print__select {
+                        border: none;
+                        font-size: 16px;
+                        background-color: $white;
+                        margin: 15px 15px;
+                        border: 2px solid $grey;
+                        border-radius: 28px;
+                        padding: 5px;
+                        &option[value="manuscript"] {
+                            background-color:red;
+                        }
+                    }
+                    
+                    #print_text {
+                        margin: 10px 10px;
+                        border: 2px solid $grey;
+                        border-radius: 28px;
+                        padding: 5px;
+                    }
+                }
+                .size_field {
+                    display: flex;
+                    flex-direction: column;
+                    @include xxl() {
+                        flex-direction: row;
+
+                    }
+                    [type=radio] {
+                        opacity: 0;
+                    }
+    
+                    [type=radio] + span {
+                        cursor: pointer;
+                        font-weight: 300;
+                    }
+    
+                    [type=radio]:checked + span {
+                        font-weight: 700;
+                        color: $green
+                    }
+                }
+                .checkout {
+                    padding: 10px 50px;
+                    .button__checkout{
+                        color: $white;
+                        cursor: pointer;
+                        padding: 12px 32px;
+                        border: none;
+                        border-radius: 34px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 16px;
+                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+                        svg {
+                            width: 40px;
+                            height: 40px;
+                            margin-right: 10px;
+                            fill: $white;
+                        }
+                        &:hover {
+                        color: $white;
+                        background-color: $primary;
+                            svg {
+                                fill: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .inspiration {
+            width: 100%;
+            padding: toRem(8) toRem(16);
+
+            @include xxl() {
+                margin: 50px 0px;
+                gap: toRem(32);
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: toRem(64);
+            align-items: center;
+            background: #F8F8F8;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            h2 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+            .gallery {
+                display: flex;
+                flex-direction: column;
+                gap: toRem(32);
+                @include xxl() {
+                    flex-direction: row;
+                    gap: toRem(0);
+                }
+                justify-content: center;
+                align-items: center;
+                h5 {
+                    margin: 0px 0px 5px 5px;
+                }
+                section {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    img {
+                        width: 50%;
+                        height: 50%;
+                    }
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        p {
+                            font-size: 12px;
+                            margin: 0px 0px 5px 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

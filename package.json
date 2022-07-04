@@ -1,0 +1,24 @@
+{
+  "name": "isoeon",
+  "version": "1.0.0",
+  "description": "Site de précommande d'une thermos personnalisable",
+  "main": "index.js",
+  "scripts": {
+    "scss": "npx sass resources/scss/main.scss:resources/css/main.css --no-source-map",
+   "scss-watch": "npx sass resources/scss/main.scss:resources/css/main.css --no-source-map -w"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminalrt/Isoeon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminalrt/Isoeon/issues"
+  },
+  "homepage": "https://github.com/benjaminalrt/Isoeon#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

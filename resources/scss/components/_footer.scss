@@ -1,0 +1,124 @@
+.footer {
+    padding: toRem(16) toRem(64) toRem(200);
+    text-align: center;
+
+    a:hover {
+        color: $primary;
+    }
+
+    @include xxl {
+        padding: toRem(64) toRem(64) 0;
+        text-align: left;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        @include xxl {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+
+    &__separator {
+        border-top: 1px solid $dark;
+        opacity: 10%;
+        margin: 0;
+
+        @include xxl {
+            margin-top: 2.5rem;
+            display: block;
+        }
+
+        &--mobile {
+            display: block;
+
+            @include xxl {
+                display: none;
+            }
+        }
+    }
+
+
+    &__content {
+        @include xxl {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: end;
+        }
+    }
+
+
+    &__abouts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.4rem;
+        color: $dark;
+        line-height: 1.5rem;
+        margin-bottom: 2.5rem;
+
+        @include xxl {
+            row-gap: 2.5rem;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 0;
+        }
+    }
+
+    &__logo {
+        margin-top: 2rem;
+    }
+
+
+    &__about{
+        font-style: normal;
+        line-height: 26px;
+
+        &-title {
+            font-weight: 700;
+        }
+
+        &-line {
+            font-weight: 400;
+        }
+
+        &-link {
+            color: $dark;
+            text-decoration: none;
+        }
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__copyright{
+        text-align: center;
+    }
+
+    &__socials {
+        display: flex;
+        column-gap: 1rem;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        li{
+            svg{
+                height: 24px;
+                color: $dark;
+            }
+            &:hover{
+                svg{
+                    fill: $primary;
+                }
+            }
+        }
+
+        @include xxl {
+            justify-self: end;
+        }
+    }
+}

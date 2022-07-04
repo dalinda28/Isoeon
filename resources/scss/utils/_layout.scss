@@ -1,0 +1,14 @@
+.container {
+  padding-left: toRem(64);
+  padding-right: toRem(64);
+}
+
+
+.d-none{
+  display: none;
+  &.d-xxl-block{
+    @include xxl() {
+      display: block;
+    }
+  }
+}

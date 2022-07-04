@@ -1,0 +1,113 @@
+
+.navbar{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    top: calc(100vh - 200px);
+
+    display: flex;
+    justify-content: center;
+    padding-top: toRem(50);
+    
+    nav {
+        margin: 0 1rem;
+        padding: toRem(12) toRem(24);
+        background: $white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 34px;
+        text-align: center;
+        &__burger-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        gap: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
+    li{
+        a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include xxl(){
+                flex-direction: row;
+            }
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            @include xxl(){
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &.active, &:hover{
+            a {
+                color: $primary;
+            }
+            svg{
+                fill: $primary;
+            }
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: $black;
+            &:hover {
+                color: $primary;
+            }
+        }
+        .navbar__icon{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    }
+    @include xxl {
+        top: unset;
+        nav {
+            padding: 12px 32px;
+            background: $white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 34px;
+            text-align: center;
+            &__burger-button {
+                display: none;
+            }
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            gap: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        li{ 
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: $black;
+            }
+            .navbar__icon{
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+        }
+    }
+}

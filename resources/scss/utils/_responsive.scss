@@ -1,0 +1,14 @@
+//$xxl: 1440px;
+$xxl: 980px;
+
+@mixin xxl {
+    @media screen and (min-width: $xxl) {
+        @content
+    }
+}
+
+@mixin lg {
+    @media screen and (min-width: 980px) {
+        @content
+    }
+}
